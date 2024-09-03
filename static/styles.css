@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+:root {
+    --mainblue: rgb(0, 102, 255);
+    --maindark: rgb(18, 23, 36);
+    --mainlight: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;    
+    background: linear-gradient(to bottom, var(--mainblue), var(--maindark));
+    background-repeat: no-repeat;    
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar {
+    background-color: var(--maindark);
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+    position: relative; 
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 5px;
+    background-color: var(--mainlight);
+}
+
+.navbar a {
+    color: var(--mainlight);
+    font-size: 2rem;    
+    border-radius: 0.4rem;;
+    margin: 0rem 2rem;
+    text-decoration: none; 
+    position: relative; 
+    transition: font-size 0.3s ease; 
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.5px; 
+    height: 2px; 
+    background-color: var(--mainlight);    
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.navbar a:hover::after {
+    opacity: 1;
+}
+
+.navbar a:hover {
+    font-size: 1.8rem;
+}
+
+/*HOME PAGE*/
+.intro {
+    color: var(--mainlight);
+    padding: 6rem;
+}
+
+.intro #name {
+    font-size: 8rem;
+}
+
+.intro #location {
+    font-size: 2rem;
+}
+
+.title_card {
+    color:var(--mainlight);
+    padding: 1rem;
+    margin: 2.1rem;
+    font-size: 2rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+    background-color: var(--maindark);
+    position: relative;
+}
+
+.title_card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--mainlight);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}
+
+.experience_gridbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+}
+
+.experience_gridbox .main_experience_card h2, .experience_gridbox .teaching_card h2 {
+    color:var(--mainlight);
+    text-align: center;
+    font-size: 1.8rem;    
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.experience_gridbox .main_experience_card li, .experience_gridbox .teaching_card li {
+    color:var(--mainlight);
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.experience_gridbox .main_experience_card, .experience_gridbox .teaching_card {
+    background-color: var(--maindark); 
+    align-items: left;
+    position: relative;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+}
+
+.experience_gridbox .main_experience_card::after, .experience_gridbox .teaching_card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--mainlight);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}
+
+.toolkit_gridbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    justify-content: center;
+    gap: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+.toolkit_gridbox .programming_card h2, .toolkit_gridbox .frontend_card h2, .toolkit_gridbox .backend_card h2 {
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.toolkit_gridbox .programming_card li, .toolkit_gridbox .frontend_card li, .toolkit_gridbox .backend_card li {
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 0.5rem;
+}
+
+.toolkit_gridbox .programming_card, .toolkit_gridbox .frontend_card, .toolkit_gridbox .backend_card {
+    color: var(--mainlight);
+    background-color: var(--maindark); 
+    align-items: left;
+    position: relative;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+}
+
+.toolkit_gridbox .programming_card::after, .toolkit_gridbox .frontend_card::after, .toolkit_gridbox .backend_card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--mainlight);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}
+
+/* SOCIALS PAGE */
+.social_intro {
+    color: var(--mainlight);
+    padding-top: 1.75rem;
+    padding-bottom: 0.5rem;        
+}
+
+.social_intro #social_title {
+    font-size: 5rem;
+}
+
+.social_intro #social_description {
+    font-size: 1.75rem;
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+    margin: 0 8rem;
+    padding: 0rem 12rem 1rem 12rem;
+    transition: padding 0.3s ease;
+}
+
+.socials:hover {
+    padding: 0rem 13rem 1rem 13rem;
+}
+
+.socials a {
+    color: var(--mainlight);
+    font-size: 3.2rem;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+.socials a:hover {
+    font-size: 2.75rem;
+}
+
+.social a:visited {
+    color: inherit;
+}
+
+.socials .instagram, .socials .linkedin, .socials .github, .socials .email {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    color: var(--mainlight);
+    background-color: var(--maindark);    
+    border-radius: 1.5rem;
+    gap: 1rem;
+    margin: 1.2rem;
+    padding: 1.2rem;   
+}
+
+/* PROJECTS PAGE */
+.projects_intro {   
+    color: var(--mainlight);
+    padding-top: 1.75rem;
+    padding-bottom: 0.25rem;  
+}
+
+.projects_intro #projects_title {
+    font-size: 5rem;
+}
+
+.projects_intro #projects_description {
+font-size: 1.75rem;
+}
+
+.projects_gridbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
+    color: var(--mainlight);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.project_title a {
+    color: var(--mainlight);
+    background-color: var(--maindark);
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    display: inline-block;
+    width: max-content;
+    text-decoration: none;
+    transition: font-size 0.4s ease;
+}
+
+.project_title a:visited {
+    color: inherit;
+}
+
+.project_title a:hover {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    
+} 
+
+#project_description {
+    padding: 2.4rem 0.75rem 1rem 0.75rem;
+    margin: -2.1rem 5rem 1.5rem 5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    background: var(--mainblue);
+    border-radius: 1rem;
+    z-index: -1;
+
+}
+
+/* ABOUT PAGE */
+.about_me {
+    margin: 2rem;
+    color: var(--mainlight);  
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+#about_title {
+    background-color: var(--maindark);
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#about_description {
+    background-color: var(--mainblue);
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 1.6rem;
+    padding: 3rem 1rem 1.5rem 1rem;
+    margin: -2rem 4rem 4rem 4rem;
+    border-radius: 1rem;
+    z-index: -1;
+}
