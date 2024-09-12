@@ -289,7 +289,7 @@ font-size: 1.75rem;
     margin: 1rem;
 }
 
-.airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
+.fact_or_fiction, .airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
     color: var(--mainlight);
     display: grid;
     grid-template-columns: 1fr;
