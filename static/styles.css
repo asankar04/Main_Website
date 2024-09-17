@@ -21,7 +21,7 @@ html {
 body {
     margin: 0;    
     /* background: linear-gradient(to bottom, var(--mainblue), var(--maindark)); */
-    background: rgba(226, 237, 255, 0.6);
+    background: rgba(220, 233, 255, 0.6);
     background-repeat: no-repeat;    
     background-size: cover;
     min-height: 100vh;
@@ -110,8 +110,8 @@ body {
     height: 100%;
     width: 100%;
     background: var(--mainblueshadow);    
-    box-shadow: 0 0 1.4rem var(--mainblueshadow);
-    padding: 0.2rem;
+    box-shadow: 0 0 1rem var(--mainblueshadow);
+    padding: 0.15rem;
     border-radius: 0.4rem;
     top: 50%;
     left: 50%;
@@ -125,9 +125,7 @@ body {
     text-align: left;
     justify-content: center;
     gap: 2.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 1rem;
+    padding: 0rem 5.5rem 1rem 5.5rem;
 }
 
 .experience_gridbox .main_experience_card h2, .experience_gridbox .teaching_card h2 {
@@ -146,26 +144,20 @@ body {
 
 .experience_gridbox .main_experience_card, .experience_gridbox .teaching_card {
     background-color: var(--mainlight); 
-    box-shadow: 0 0 1.5rem var(--mainblueshadow);
+    box-shadow: none;
     align-items: left;
     position: relative;
     padding: 1rem;
     display: inline-block;
     border-radius: 0.4rem;
+    scale: 100%;
+    transition: box-shadow 0.5s ease;
+    transition: scale 0.4s ease;
 }
 
-.experience_gridbox .main_experience_card::after, .experience_gridbox .teaching_card::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    /* background: var(--mainblueshadow); */
-    padding: 0.2rem;
-    border-radius: 0.4rem;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
+.experience_gridbox .main_experience_card:hover, .experience_gridbox .teaching_card:hover {
+    scale: 105%;
+    box-shadow: 0 0 1.5rem var(--mainblueshadow);
 }
 
 .toolkit_gridbox {
@@ -173,9 +165,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;    
     justify-content: center;
     gap: 2.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 2rem;
+    padding: 0rem 5.5rem 3rem 5.5rem;
 }
 
 .toolkit_gridbox .programming_card h2, .toolkit_gridbox .frontend_card h2, .toolkit_gridbox .backend_card h2 {
@@ -194,86 +184,20 @@ body {
 .toolkit_gridbox .programming_card, .toolkit_gridbox .frontend_card, .toolkit_gridbox .backend_card {
     color: var(--maindark);
     background-color: var(--mainlight);
-    box-shadow: 0 0 1.25rem var(--mainblueshadow); 
+    box-shadow: none;
     align-items: left;
     position: relative;
     padding: 1rem;
     display: inline-block;
+    scale: 100%;
     border-radius: 0.4rem;
+    transition: box-shadow 0.5s ease;
+    transition: scale 0.4s ease;
 }
 
-.toolkit_gridbox .programming_card::after, .toolkit_gridbox .frontend_card::after, .toolkit_gridbox .backend_card::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    /* background: var(--mainblueshadow); Removes hard blue outline*/ 
-    padding: 0.2rem;
-    border-radius: 0.4rem;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-}
-
-/* SOCIALS PAGE */
-.social_intro {
-    color: var(--mainblue);
-    padding-top: 1.5rem;
-    padding-bottom: 0.5rem;        
-}
-
-.social_intro #social_title {
-    font-size: 5rem;
-}
-
-.social_intro #social_description {
-    color: var(--maindark);
-    font-size: 1.75rem;
-}
-
-.socials {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    justify-content: center;
-    margin: 0 8rem;
-    padding: 0rem 12rem 1rem 12rem;
-    transition: padding 0.3s ease;
-}
-
-.socials:hover {
-    padding: 0rem 13rem 1rem 13rem;
-}
-
-.socials a {
-    color: var(--maindark);
-    font-size: 3.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: font-size 0.3s ease;
-}
-
-.socials a:hover {
-    font-size: 2.75rem;
-}
-
-.social a:visited {
-    color: inherit;
-}
-
-.socials .instagram, .socials .linkedin, .socials .github, .socials .email {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
-    color: var(--mainlight);
-    box-shadow: 0 0 1.5rem var(--mainblueshadow);
-    border-radius: 1.5rem;
-    gap: 1rem;
-    margin: 1.2rem;
-    padding: 1.2rem;   
+.toolkit_gridbox .programming_card:hover, .toolkit_gridbox .frontend_card:hover, .toolkit_gridbox .backend_card:hover {
+    scale: 105%;
+    box-shadow: 0 0 1.25rem var(--mainblueshadow); 
 }
 
 /* PROJECTS PAGE */
@@ -309,11 +233,10 @@ font-size: 1.75rem;
 }
 
 .project_title a {
-    color: var(--mainlight);
     background-color: var(--maindark);
     padding: 1rem;
     margin-top: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: bold;
     border-radius: 1rem;
     display: inline-block;
@@ -328,19 +251,73 @@ font-size: 1.75rem;
 
 .project_title a:hover {
     text-decoration: underline;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     
 } 
 
 #project_description {
+    color: var(--maindark);
+    background: var(--mainlight);
+    box-shadow: 0 0 2rem var(--mainblueshadow);
     padding: 2.4rem 0.75rem 1rem 0.75rem;
     margin: -2.1rem 5rem 1.5rem 5rem;
-    font-size: 1.4rem;
+    font-size: 1.4rem;   
     line-height: 1.8rem;
-    background: var(--mainblue);
     border-radius: 1rem;
     z-index: -1;
+}
 
+/* SOCIALS PAGE */
+.social_intro {
+    color: var(--mainblue);
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;        
+}
+
+.social_intro #social_title {
+    font-size: 5rem;
+}
+
+.social_intro #social_description {
+    color: var(--maindark);
+    font-size: 1.75rem;
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+    margin: 0 8rem;
+    padding: 0rem 12rem 1rem 12rem;
+}
+
+.socials a {
+    color: var(--maindark);
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: font-size 0.2s ease;
+}
+
+.socials a:hover {
+    font-size: 3.4rem;
+}
+
+.social a:visited {
+    color: inherit;
+}
+
+.socials .instagram, .socials .linkedin, .socials .github, .socials .email {
+    display: grid;
+    grid-template-columns: max-content max-content;    
+    align-items: center;
+    text-align: center;    
+    box-shadow: 0 0 1.3rem var(--mainblueshadow);
+    border-radius: 1.5rem;
+    gap: 1rem;
+    margin: 1.2rem;
+    padding: 1.2rem;   
 }
 
 /* ABOUT PAGE */
