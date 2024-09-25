@@ -223,7 +223,7 @@ body {
     margin: 1rem;
 }
 
-.fact_or_fiction, .airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
+.dog_breed_gallery, fact_or_fiction, .airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
     color: var(--mainlight);
     display: grid;
     grid-template-columns: 1fr;
