@@ -216,20 +216,20 @@ body {
 }
 
 .projects_gridbox {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem;
 }
 
-.dog_breed_gallery, fact_or_fiction, .airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
+.dog_breed_gallery, .fact_or_fiction, .airport_distance_visualizer, .own_website, .reactJS_password, .java_password, .java_calculator {
     color: var(--mainlight);
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    max-width: 100%;
+    max-width: 95%;
 }
 
 .project_title a {
@@ -256,7 +256,7 @@ body {
     
 } 
 
-#project_description {
+.project_description {
     color: var(--maindark);
     background: var(--mainlight);
     box-shadow: 0 0 2rem var(--mainblueshadow);
