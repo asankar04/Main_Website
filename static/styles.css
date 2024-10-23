@@ -30,21 +30,10 @@ body {
 }
 
 .navbar {
-    /* background-color: var(--mainblueshadow); */
+    /* background-color: var(--mainblueshadow); */   
     padding-top: 2rem; 
     padding-bottom: 2rem;
-    position: relative; 
 }
-
-/* .navbar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 5px;
-    background-color: var(--mainlight);
-} */
 
 .navbar a {
     color: var(--maindark);
@@ -120,8 +109,8 @@ body {
 }
 
 .experience_gridbox {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     justify-content: center;
     gap: 2.5rem;
@@ -161,8 +150,8 @@ body {
 }
 
 .toolkit_gridbox {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;    
+    display: flex;
+    flex-direction: row;   
     justify-content: center;
     gap: 2.5rem;
     padding: 0rem 5.5rem 3rem 5.5rem;
@@ -188,7 +177,7 @@ body {
     align-items: left;
     position: relative;
     padding: 1rem;
-    display: inline-block;
+    min-width: 20rem;
     scale: 100%;
     border-radius: 0.4rem;
     transition: box-shadow 0.5s ease;
